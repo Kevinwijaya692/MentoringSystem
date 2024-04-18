@@ -127,5 +127,12 @@ namespace mentoring_system.Implementation
             Console.WriteLine("Phone Number: " + GetPhoneNumber());
             Console.WriteLine("Address: " + GetAddress());
         }
+
+        public bool ValidatePassword(string password)
+        {
+            // Validation logic
+            return true;
+        }
+
     }
 }
