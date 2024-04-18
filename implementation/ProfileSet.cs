@@ -102,6 +102,11 @@ namespace mentoring_system.Implementation
             return this.profilePicture;
         }
 
+        public void SetProfilePicture(T profilePicture)
+        {
+            this.profilePicture = profilePicture;
+        }
+
         // Invariant: namaUser, umurUser, userName, dan password tidak boleh null
         public void PrintProfile()
         {
