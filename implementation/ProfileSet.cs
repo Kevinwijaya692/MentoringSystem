@@ -108,5 +108,24 @@ namespace mentoring_system.Implementation
             Console.WriteLine("Username " + GetuserName());
             Console.WriteLine("Password: " + Getpassword());
         }
+
+        public void PrintProfileWithContactDetails()
+        {
+            Debug.Assert(namaUser != null, "namaUser tidak boleh null");
+            Debug.Assert(umurUser != null, "umurUser tidak boleh null");
+            Debug.Assert(userName != null, "userName tidak boleh null");
+            Debug.Assert(password != null, "password tidak boleh null");
+            Debug.Assert(email != null, "email tidak boleh null");
+            Debug.Assert(phoneNumber != null, "phoneNumber tidak boleh null");
+            Debug.Assert(address != null, "address tidak boleh null");
+
+            Console.WriteLine("Nama: " + Getnama());
+            Console.WriteLine("Umur " + Getumur());
+            Console.WriteLine("Username " + GetuserName());
+            Console.WriteLine("Password: " + Getpassword());
+            Console.WriteLine("Email: " + GetEmail());
+            Console.WriteLine("Phone Number: " + GetPhoneNumber());
+            Console.WriteLine("Address: " + GetAddress());
+        }
     }
 }
