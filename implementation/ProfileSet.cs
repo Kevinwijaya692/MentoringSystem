@@ -15,14 +15,16 @@ namespace mentoring_system.Implementation
         public T userName;
         public T password;
         public T email;
+        public T phoneNumber;
 
-        public ProfileSet(T namaUser, T umurUser, T userName, T password, T email)
+        public ProfileSet(T namaUser, T umurUser, T userName, T password, T email, T phoneNumber)
         {
             this.namaUser = namaUser;
             this.umurUser = umurUser;
             this.userName = userName;
             this.password = password;
             this.email = email;
+            this.phoneNumber = phoneNumber;
         }
 
         // Precondition: parameter namaUser, umurUser, userName, dan password tidak boleh null
@@ -64,6 +66,11 @@ namespace mentoring_system.Implementation
         public T GetEmail()
         {
             return this.email;
+        }
+
+        public T GetPhoneNumber()
+        {
+            return this.phoneNumber;
         }
 
         // Invariant: namaUser, umurUser, userName, dan password tidak boleh null
