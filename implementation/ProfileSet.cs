@@ -228,5 +228,11 @@ namespace mentoring_system.Implementation
             }
         }
 
+        public string EncryptPassword(string password)
+        {
+            // Encryption logic
+            return password;
+        }
+
     }
 }
