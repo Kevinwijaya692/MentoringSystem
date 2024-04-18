@@ -157,5 +157,11 @@ namespace mentoring_system.Implementation
             // Validation logic
             return true;
         }
+
+        public bool ValidatePhoneNumber(string phoneNumber)
+        {
+            // Validation logic
+            return true;
+        }
     }
 }
