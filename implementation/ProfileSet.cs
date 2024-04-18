@@ -17,8 +17,9 @@ namespace mentoring_system.Implementation
         public T email;
         public T phoneNumber;
         public T address;
+        public T profilePicture;
 
-        public ProfileSet(T namaUser, T umurUser, T userName, T password, T email, T phoneNumber, T address)
+        public ProfileSet(T namaUser, T umurUser, T userName, T password, T email, T phoneNumber, T address, T profilePicture)
         {
             this.namaUser = namaUser;
             this.umurUser = umurUser;
@@ -27,6 +28,7 @@ namespace mentoring_system.Implementation
             this.email = email;
             this.phoneNumber = phoneNumber;
             this.address = address;
+            this.profilePicture = profilePicture;
         }
 
         // Precondition: parameter namaUser, umurUser, userName, dan password tidak boleh null
@@ -95,6 +97,16 @@ namespace mentoring_system.Implementation
             this.address = address;
         }
 
+        public T GetProfilePicture()
+        {
+            return this.profilePicture;
+        }
+
+        public void SetProfilePicture(T profilePicture)
+        {
+            this.profilePicture = profilePicture;
+        }
+
         // Invariant: namaUser, umurUser, userName, dan password tidak boleh null
         public void PrintProfile()
         {
@@ -145,5 +157,56 @@ namespace mentoring_system.Implementation
             // Validation logic
             return true;
         }
+
+        public bool ValidateAge(int age)
+        {
+            // Validation logic
+            return true;
+        }
+
+        public bool ValidateAddress(string address)
+        {
+            // Validation logic
+            return true;
+        }
+
+        public bool ValidatePhoneNumber(string phoneNumber)
+        {
+            // Validation logic
+            return true;
+        }
+
+        public void PrintProfileWithPicture()
+        {
+            Debug.Assert(namaUser != null, "namaUser tidak boleh null");
+            Debug.Assert(umurUser != null, "umurUser tidak boleh null");
+            Debug.Assert(userName != null, "userName tidak boleh null");
+            Debug.Assert(password != null, "password tidak boleh null");
+            Debug.Assert(email != null, "email tidak boleh null");
+            Debug.Assert(phoneNumber != null, "phoneNumber tidak boleh null");
+            Debug.Assert(address != null, "address tidak boleh null");
+            Debug.Assert(profilePicture != null, "profilePicture tidak boleh null");
+
+            Console.WriteLine("Nama: " + Getnama());
+            Console.WriteLine("Umur " + Getumur());
+            Console.WriteLine("Username " + GetuserName());
+            Console.WriteLine("Password: " + Getpassword());
+            Console.WriteLine("Email: " + GetEmail());
+            Console.WriteLine("Phone Number: " + GetPhoneNumber());
+            Console.WriteLine("Address: " + GetAddress());
+            Console.WriteLine("Profile Picture: " + GetProfilePicture());
+        }
+
+        public bool IsComplete<T>(T namaUser, T umurUser, T password, T email, T phoneNumber, T address)
+        {
+            
+            return ValidateName(namaUser.ToString()) && 
+                ValidateAge(Convert.ToInt32(umurUser)) && 
+                ValidatePassword(password.ToString()) && 
+                ValidateEmail(email.ToString()) && 
+                ValidatePhoneNumber(phoneNumber.ToString()) && 
+                ValidateAddress(address.ToString());
+        }
+
     }
 }
