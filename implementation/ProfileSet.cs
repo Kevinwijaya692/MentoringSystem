@@ -151,5 +151,11 @@ namespace mentoring_system.Implementation
             // Validation logic
             return true;
         }
+
+        public bool ValidateAddress(string address)
+        {
+            // Validation logic
+            return true;
+        }
     }
 }
