@@ -90,6 +90,11 @@ namespace mentoring_system.Implementation
             return this.address;
         }
 
+        public void SetAddress(T address)
+        {
+            this.address = address;
+        }
+
         // Invariant: namaUser, umurUser, userName, dan password tidak boleh null
         public void PrintProfile()
         {
