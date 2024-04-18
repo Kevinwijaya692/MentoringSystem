@@ -208,5 +208,25 @@ namespace mentoring_system.Implementation
                 ValidateAddress(address.ToString());
         }
 
+        public void PrintCompletionMessage()
+        {
+            Debug.Assert(namaUser != null, "namaUser tidak boleh null");
+            Debug.Assert(umurUser != null, "umurUser tidak boleh null");
+            Debug.Assert(userName != null, "userName tidak boleh null");
+            Debug.Assert(password != null, "password tidak boleh null");
+            Debug.Assert(email != null, "email tidak boleh null");
+            Debug.Assert(phoneNumber != null, "phoneNumber tidak boleh null");
+            Debug.Assert(address != null, "address tidak boleh null");
+
+            if (IsComplete(namaUser, umurUser, password, email, phoneNumber, address))
+            {
+                Console.WriteLine("Profile Set is Complete");
+            }
+            else
+            {
+                Console.WriteLine("Profile Set is not Complete");
+            }
+        }
+
     }
 }
