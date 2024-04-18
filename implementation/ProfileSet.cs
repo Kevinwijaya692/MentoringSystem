@@ -78,6 +78,11 @@ namespace mentoring_system.Implementation
             this.email = email;
         }
 
+        public void SetPhoneNumber(T phoneNumber)
+        {
+            this.phoneNumber = phoneNumber;
+        }
+
         // Invariant: namaUser, umurUser, userName, dan password tidak boleh null
         public void PrintProfile()
         {
