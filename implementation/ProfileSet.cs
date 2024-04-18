@@ -140,5 +140,10 @@ namespace mentoring_system.Implementation
             return true;
         }
 
+        public bool ValidateName(string name)
+        {
+            // Validation logic
+            return true;
+        }
     }
 }
