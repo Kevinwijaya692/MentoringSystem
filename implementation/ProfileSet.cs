@@ -134,5 +134,11 @@ namespace mentoring_system.Implementation
             return true;
         }
 
+        public bool ValidateEmail(string email)
+        {
+            // Validation logic
+            return true;
+        }
+
     }
 }
