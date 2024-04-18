@@ -234,5 +234,11 @@ namespace mentoring_system.Implementation
             return password;
         }
 
+        public string HashPassword(string password)
+        {
+            // Hashing logic
+            return password;
+        }
     }
 }
+
