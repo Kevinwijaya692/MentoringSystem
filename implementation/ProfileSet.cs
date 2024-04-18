@@ -197,5 +197,16 @@ namespace mentoring_system.Implementation
             Console.WriteLine("Profile Picture: " + GetProfilePicture());
         }
 
+        public bool IsComplete<T>(T namaUser, T umurUser, T password, T email, T phoneNumber, T address)
+        {
+            
+            return ValidateName(namaUser.ToString()) && 
+                ValidateAge(Convert.ToInt32(umurUser)) && 
+                ValidatePassword(password.ToString()) && 
+                ValidateEmail(email.ToString()) && 
+                ValidatePhoneNumber(phoneNumber.ToString()) && 
+                ValidateAddress(address.ToString());
+        }
+
     }
 }
