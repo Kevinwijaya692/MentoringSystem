@@ -145,5 +145,11 @@ namespace mentoring_system.Implementation
             // Validation logic
             return true;
         }
+
+        public bool ValidateAge(int age)
+        {
+            // Validation logic
+            return true;
+        }
     }
 }
