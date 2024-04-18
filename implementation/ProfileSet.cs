@@ -17,8 +17,9 @@ namespace mentoring_system.Implementation
         public T email;
         public T phoneNumber;
         public T address;
+        public T profilePicture;
 
-        public ProfileSet(T namaUser, T umurUser, T userName, T password, T email, T phoneNumber, T address)
+        public ProfileSet(T namaUser, T umurUser, T userName, T password, T email, T phoneNumber, T address, T profilePicture)
         {
             this.namaUser = namaUser;
             this.umurUser = umurUser;
@@ -27,6 +28,7 @@ namespace mentoring_system.Implementation
             this.email = email;
             this.phoneNumber = phoneNumber;
             this.address = address;
+            this.profilePicture = profilePicture;
         }
 
         // Precondition: parameter namaUser, umurUser, userName, dan password tidak boleh null
@@ -93,6 +95,11 @@ namespace mentoring_system.Implementation
         public void SetAddress(T address)
         {
             this.address = address;
+        }
+
+        public T GetProfilePicture()
+        {
+            return this.profilePicture;
         }
 
         // Invariant: namaUser, umurUser, userName, dan password tidak boleh null
@@ -163,5 +170,7 @@ namespace mentoring_system.Implementation
             // Validation logic
             return true;
         }
+
+
     }
 }
